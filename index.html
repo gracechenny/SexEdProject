@@ -102,8 +102,8 @@ var div = d3.select("body")
     		.style("opacity", 0);
 
 // Load in my states data!
-d3.csv("StateScores.csv", function(data) {
-color.domain([-5,5]); // setting the range of the input data
+d3.csv("FinalScoreSheet.csv", function(data) {
+color.domain([-12, 10]); // setting the range of the input data
 
 // Load GeoJSON data and merge with states data
 d3.json("us-states.json", function(json) {
@@ -180,6 +180,14 @@ function showModal(d){
 	} else if(med == -2){
 		text += " it does have"
 	}
+
+	var Culture  = d.properties.Culture;
+	if(Culture == 1) {
+		text += "The curricula does not need to be culturally appropriate and unbiased."
+	} else if(Culture == -1){
+		text += "The curricula must be culturally appropriate and unbiased."
+	}
+
 	$("#text").html(text);
 
 
