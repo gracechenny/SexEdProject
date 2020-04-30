@@ -120,6 +120,32 @@ for (var i = 0; i < data.length; i++) {
 	//
 	var dataMed = data[i].Medically;
 
+	var datamedac = data[i].medac;
+
+	var dataculture = data[i].culture;
+
+	var datareligion = data[i].religion;
+
+	var datacontraception = data[i].contraception;
+
+	var dataabstinence = data[i].abstinence;
+
+	var datamarriage = data[i].marriage;
+
+	var datagay = data[i].gay;
+
+	var datacondoms = data[i].condoms;
+
+	var datahealthy = data[i].healthy;
+
+	var datadecision = data[i].decision;
+
+	var datarefusal = data[i].refusal;
+
+	var dataconsent = data[i].consent;
+
+	var datadating = data[i].dating;
+
 	console.log(dataState);
 	// Find the corresponding state inside the GeoJSON
 	for (var j = 0; j < json.features.length; j++)  {
@@ -131,12 +157,20 @@ for (var i = 0; i < data.length; i++) {
 		// Copy the data value into the JSON
 		json.features[j].properties.score = dataValue;
 		json.features[j].properties.Med = dataMed;
+		json.features[j].properties.medac = datamedac;
+		json.features[j].properties.culture = dataculture;
+		json.features[j].properties.religion = datareligion;
+		json.features[j].properties.contraception = datacontraception;
+		json.features[j].properties.abstinence = dataabstinence;
+		json.features[j].properties.marriage = datamarriage;
+		json.features[j].properties.gay = datagay;
+		json.features[j].properties.condoms = datacondoms;
+		json.features[j].properties.healthy = datahealthy;
+		json.features[j].properties.decision = datadecision;
+		json.features[j].properties.refusal = datarefusal;
+		json.features[j].properties.consent = dataconsent;
+		json.features[j].properties.dating = datadating;
 
-		// Stop looking through the JSON
-		break;
-		}
-	}
-}
 
 // Bind the data to the SVG and create one path per GeoJSON feature
 svg.selectAll("path")
@@ -246,7 +280,7 @@ function showModal(d){
 		text += "The state’s sex ed program must provide information about the skills needed to have healthy  sexual and romantic relationships."
 	}
 
-	var decision  = d.properties.decision;
+	var decision = d.properties.decision;
 	if(decision == 1) {
 		text += "The curricula does not require information on sexual decision-making and self-discipline be taught."
 	} else if(decision == -1){
