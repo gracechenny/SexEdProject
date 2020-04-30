@@ -112,13 +112,16 @@ d3.json("us-states.json", function(json) {
 for (var i = 0; i < data.length; i++) {
 
 	// Grab State Name
-	var dataState = data[i].state;
+	var dataState = data[i].State;
 
 	// Grab data value
-	var dataValue = data[i].Score;
+	var dataValue = data[i].TotalScore;
 
-	//
-	var dataMed = data[i].Medically;
+	// Grab Medical Data
+	var dataMed = data[i].medac;
+
+	// Grab Culture Data
+	var dataCulture = data[i].Culture;
 
 	console.log(dataState);
 	// Find the corresponding state inside the GeoJSON
@@ -130,7 +133,8 @@ for (var i = 0; i < data.length; i++) {
 
 		// Copy the data value into the JSON
 		json.features[j].properties.score = dataValue;
-		json.features[j].properties.Med = dataMed;
+		json.features[j].properties.medac = dataMed;
+		json.features[j].properties.Culture = dataCulture;
 
 		// Stop looking through the JSON
 		break;
@@ -149,7 +153,7 @@ svg.selectAll("path")
 	.style("fill", function(d) {
 
 	// Get data value
-	var value = d.properties.score;
+	var value = d.properties.TotalScore;
 
 	if (value) {
 		console.log(value);
@@ -173,13 +177,7 @@ svg.selectAll("path")
 function showModal(d){
   $(".modal").show();
 	$("#title").html(d.properties.name);
-	var text = d.properties.name;
-	var med  = d.properties.Med;
-	if(med == 1) {
-		text += " does not have"
-	} else if(med == -2){
-		text += " it does have"
-	}
+	// var text = d.properties.name;
 
 	var Culture  = d.properties.Culture;
 	if(Culture == 1) {
@@ -193,7 +191,7 @@ function showModal(d){
 		text += "This state does not mandate sex/HIV education curricula be medically accurate."
 	} else if(medac == -1){
 		text += "This states mandates that HIV education curricula must be medically accurate, but does not mandate the sex education be medically accurate."
-	}else if(medac == -2){
+	} else if(medac == -2){
 		text += "This states mandates that both sex and HIV education curricula must be medically accurate."
 	}
 
@@ -258,13 +256,6 @@ function showModal(d){
 		text += "Instructional information on refusal skills and personal boundaries does not need to be included in the sex ed curricula."
 	} else if(refusal == -1){
 		text += "Instructional information on refusal skills and personal boundaries must be included in the sex ed curricula."
-	}
-
-	var consent  = d.properties.consent;
-	if(consent == 1) {
-		text += "The importance of consent to sexual activity does not need to be covered in sex ed courses."
-	} else if(consent == -1){
-		text += "The importance of consent to sexual activity must be covered."
 	}
 
 	var consent  = d.properties.consent;
