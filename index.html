@@ -188,6 +188,99 @@ function showModal(d){
 		text += "The curricula must be culturally appropriate and unbiased."
 	}
 
+	var medac  = d.properties.medac;
+	if(medac == 1) {
+		text += "This state does not mandate sex/HIV education curricula be medically accurate."
+	} else if(medac == -1){
+		text += "This states mandates that HIV education curricula must be medically accurate, but does not mandate the sex education be medically accurate."
+	}else if(medac == -2){
+		text += "This states mandates that both sex and HIV education curricula must be medically accurate."
+	}
+
+	var religion  = d.properties.religion;
+	if(religion == 1) {
+		text += "The curricula may promote religion."
+	} else if(religion == -1){
+		text += "The curricula cannot promote religion."
+	}
+
+	var contraception  = d.properties.contraception;
+	if(contraception == 1) {
+		text += "When provided, sex education does not need to include information about contraception."
+	} else if(contraception == -1){
+		text += "When provided, sex education must include information about contraception."
+	}
+
+	var abstinence  = d.properties.abstinence;
+	if(abstinence == 1) {
+		text += "This state’s sex education program must stress abstinence."
+	} else if(abstinence == 0){
+		text += "This state’s sex education program must cover abstinence."
+	}
+
+	var marriage  = d.properties.marriage;
+	if(marriage == 1) {
+		text += "The state requires their sex education programs include the importance of having sex only within marriage."
+	} else if(marriage == 0){
+		text += "The state does not require teachers to address the importance of having sex only within marriage."
+	}
+
+	var gay  = d.properties.gay;
+	if(gay == 1) {
+		text += "According to the Guttmacher Institute, there are 17 states which mandate their sex education programs paint either a positive, inclusive picture or negative, discriminatory picture of sexual orientation. This state requires their sex ed program impose a negative view of sexual orientation."
+	} else if(gay == -1){
+		text += "According to the Guttmacher Institute, there are 17 states which mandate their sex education programs paint either a positive, inclusive picture or negative, discriminatory picture of sexual orientation. This state requires their sex ed program share an inclusive perspective of sexual orientation."
+	}
+
+	var condoms  = d.properties.condoms;
+	if(condoms == 1) {
+		text += "When HIV education is provided, it does not need to include information on condoms."
+	} else if(condoms == -1){
+		text += "When HIV education is provided, it must include information on condoms."
+	}
+
+	var healthy  = d.properties.healthy;
+	if(healthy == 0) {
+		text += "The state’s sex ed program does not necessitate providing information about the skills needed to have healthy sexual and romantic relationships."
+	} else if(healthy == -1){
+		text += "The state’s sex ed program must provide information about the skills needed to have healthy  sexual and romantic relationships."
+	}
+
+	var decision  = d.properties.decision;
+	if(decision == 1) {
+		text += "The curricula does not require information on sexual decision-making and self-discipline be taught."
+	} else if(decision == -1){
+		text += "The curricula must instruct students about sexual decision-making and self-discipline."
+	}
+
+	var refusal  = d.properties.refusal;
+	if(refusal == 1) {
+		text += "Instructional information on refusal skills and personal boundaries does not need to be included in the sex ed curricula."
+	} else if(refusal == -1){
+		text += "Instructional information on refusal skills and personal boundaries must be included in the sex ed curricula."
+	}
+
+	var consent  = d.properties.consent;
+	if(consent == 1) {
+		text += "The importance of consent to sexual activity does not need to be covered in sex ed courses."
+	} else if(consent == -1){
+		text += "The importance of consent to sexual activity must be covered."
+	}
+
+	var consent  = d.properties.consent;
+	if(consent == 1) {
+		text += "The importance of consent to sexual activity does not need to be covered in sex ed courses."
+	} else if(consent == -1){
+		text += "The importance of consent to sexual activity must be covered."
+	}
+
+	var dating  = d.properties.dating;
+	if(dating == 1) {
+		text += "This state doesn’t require their educational programs include information on preventing, recognizing and responding to teen dating violence and sexual violence."
+	} else if(dating == -1){
+		text += "This state demands their educational programs include information on preventing, recognizing and responding to teen dating violence and sexual violence."
+	}
+
 	$("#text").html(text);
 
 
