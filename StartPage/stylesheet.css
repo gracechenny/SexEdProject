@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#openingtext{
+  height: 100vh;
+  font-family: amador, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25vh;
+  text-align: center;
+  padding: 10vh;
+  background-image: linear-gradient(red, white);
+
+}
+
+#newtext{
+  height: 15vh;
+  width: 100vw;
+  font-family: amador, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12vh;
+  text-align: center;
+  display: inline-block;
+  line-height: 15vh;
+  padding-top: 5vh;
+}
+
+#paragraphtext{
+  width:75vw;
+  /* overflow:scroll; */
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vh;
+}
+
+/* On mouse hover, lighten state color */
+path:hover {
+	fill-opacity: .7;
+}
+
+.modal{
+	display: none;
+	position: absolute;
+	width: 50%;
+	height: 50vh;
+	left: 25%;
+	top: 25%;
+	background: rgba(255, 255, 250, 0.5);
+}
+/* Style for Custom Tooltip */
+div.tooltip {
+ 	position: absolute;
+	text-align: center;
+	width: 60px;
+	height: 28px;
+	padding: 2px;
+	font: 12px sans-serif;
+	background: white;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+}
+
+/* STUFF COPIED FROM D3 */
+/* Legend Font Style */
+body {
+	font: 11px sans-serif;
+}
+
+/* Legend Position Style */
+.legend {
+	position:absolute;
+	left:800px;
+	top:350px;
+}
