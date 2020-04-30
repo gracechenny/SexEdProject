@@ -1,0 +1,49 @@
+state,Medically,Unbiased,Cannotn,Score
+Alabama,1,1,1,3
+Alaska,1,1,1,3
+Arizona,-1,1,1,1
+Arkansas,1,1,1,3
+California,-2,-1,-1,-4
+Colorado,1,-1,-1,-1
+Connecticut,1,1,1,3
+Delaware,1,1,1,3
+Dist. of Columbia,1,1,1,3
+Florida,1,1,1,3
+Georgia,1,1,1,3
+Hawaii,-2,1,1,0
+Idaho,1,1,1,3
+Illinois,-2,1,1,0
+Indiana,1,1,1,3
+Iowa,-2,-1,1,-2
+Kansas,1,1,1,3
+Kentucky,1,1,1,3
+Louisiana,-2,1,-1,-2
+Maine,-2,1,1,0
+Maryland,1,1,1,3
+Massachusetts,1,-1,1,1
+Michigan,1,1,1,3
+Minnesota,1,1,1,3
+Mississippi,1,1,1,3
+Missouri,-2,1,1,0
+Montana,1,1,1,3
+Nevada,1,1,1,3
+New Hampshire,1,1,1,3
+New Jersey,-2,-1,1,-2
+New Mexico,1,1,1,3
+New York,1,1,1,3
+North Carolina,-2,1,1,0
+North Dakota,1,1,1,3
+Ohio,1,1,1,3
+Oklahoma,-1,1,1,1
+Oregon,-2,-1,1,-2
+Pennsylvania,1,1,1,3
+Rhode Island,-2,-1,1,-2
+South Carolina,1,1,1,3
+Tennessee,-2,-1,1,-2
+Texas,1,1,1,3
+Utah,-2,1,1,0
+Vermont,1,1,1,3
+Virginia,-2,1,1,0
+Washington,-2,-1,1,-2
+West Virginia,1,1,1,3
+Wisconsin,1,1,1,3
